@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freestar Ad Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <img src="images/freestar-logo.png" alt="Freestar Logo" class="logo">
+            <h1>Ad Showcase</h1>
+        </div>
+        <button id="collapse-button" title="Toggle Controls">Hide Controls</button>
+    </header>
+
+    <main class="app-main">
+        <div class="mode-switcher">
+            <label>Preview Mode:</label>
+            <button id="mockup-mode-btn" class="mode-btn active">Mockup Site</button>
+            <button id="live-mode-btn" class="mode-btn">Live Preview</button>
+        </div>
+        <div id="live-url-loader" class="url-loader is-hidden">
+            <input type="text" id="url-input" placeholder="Enter a website URL, e.g., https://example.com">
+            <button id="load-site-button">Load Site</button>
+        </div>
+        <div class="showcase-controls">
+            <div class="ad-library">
+                <input type="text" id="ad-filter-input" placeholder="Filter ad units...">
+                <div id="ad-unit-list"></div>
+            </div>
+            <div class="library-actions">
+                <div id="ad-info-container"></div>
+                <button id="clear-demos-button">Clear All Demos</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="preview-container">
+        <iframe id="site-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
+        <div id="ad-overlay-container"></div>
+        <div id="mockup-site-container">
+            <div class="mockup-header"><h2>Sample News Website</h2><nav>Home | Tech | Sports</nav></div>
+            <div id="top-leaderboard-spot" class="ad-placeholder"></div>
+            <div class="mockup-body">
+                <div class="mockup-content">
+                    <h3>The Future of Digital Advertising</h3>
+                    <p>The digital advertising landscape is in a constant state of flux. As new technologies emerge and consumer behaviors shift, publishers and advertisers must adapt to stay relevant. The industry is moving towards more privacy-conscious solutions, with a greater emphasis on first-party data and contextual targeting. This requires robust and flexible ad serving technology.</p>
+                    <div id="in-article-spot" class="ad-placeholder"></div>
+                    <p>High-impact ad units continue to be a cornerstone of modern monetization strategies. Formats that capture user attention without being overly intrusive are key to balancing revenue generation with a positive user experience. The ability to demonstrate these formats accurately is crucial for sales and onboarding processes.</p>
+                    <h4>The Rise of Video and Rich Media</h4>
+                    <p>Video content consumption has exploded over the past decade, and with it, the demand for video advertising. In-stream and out-stream video units provide engaging ways to reach audiences. Formats like the video slider offer a less disruptive experience, while Superflex units adapt to the surrounding content for seamless integration. The technical implementation of these units must be flawless to ensure fast load times and smooth playback.</p>
+                    <p>Rich media ads, which incorporate interactive elements, also play a significant role. These can include anything from simple animations to complex, game-like experiences. They offer higher engagement rates than static display ads but require careful consideration of file sizes and performance impacts to avoid slowing down the host page.</p>
+                    <p>This paragraph adds more length to the page. By extending the vertical scroll, we can more effectively observe the behavior of sticky ad units. A sticky footer should remain visible at the bottom of the viewport, and sidewalls should remain fixed on the left and right, regardless of how far the user scrolls down through this content. This provides a much more realistic testing environment.</p>
+                    <h4>Contextual Targeting in a Post-Cookie World</h4>
+                    <p>With the deprecation of third-party cookies, contextual targeting has seen a major resurgence. This method involves placing ads based on the content of the page itself, rather than on the user's browsing history. For example, an ad for hiking gear might appear on an article about national parks. This approach respects user privacy while still delivering relevant advertising. Advanced contextual analysis now uses AI to understand the nuance and sentiment of an article, leading to more accurate ad placements.</p>
+                    <p>Another paragraph to further extend the page. This ensures that even on larger monitors, a significant amount of scrolling is possible. This is vital for demonstrating the value of high-viewability formats that persist as the user engages with a long article. The goal is to simulate a real, content-rich webpage as accurately as possible within this demonstration tool.</p>
+                    <p>This is the final additional paragraph to provide ample vertical scrolling space. It is purely for demo purposes to simulate a deep and engaging article. The presence of significant scrollable content allows for better observation of ad unit visibility and persistence, which is critical for understanding their performance characteristics in a live environment.</p>
+                </div>
+                <div class="mockup-sidebar">
+                    <h4>Trending</h4>
+                    <ul><li>New Gadgets</li><li>AI News</li><li>Quantum Leaps</li><li>SpaceX Launch</li><li>Green Energy</li></ul>
+                    <div id="sidebar-spot" class="ad-placeholder"></div>
+                    <h4>Editor's Picks</h4>
+                     <ul><li>The Future of Computing</li><li>A Deep Dive into Blockchain</li><li>Cybersecurity in 2025</li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
