@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Interstitial", size: "300x250", description: "A full-screen ad that covers the interface, shown between page loads.", behavior: { mockup: { type: "special", id: "interstitial" }, live: { type: "special", id: "interstitial" } } },
         { name: "Primis Video Slider", size: "300x250", description: "A video unit that slides into view at the bottom corner of the page.", behavior: { mockup: { type: 'special', id: 'primis-slider' }, live: { type: "special", id: 'primis-slider' } } }
     ];
-    const freestarLogoUrl = 'images/freestar-logo.png';
+    const freestarLogoUrl = '/ad-showcase-tool/images/Freestar-logo.png';
     let currentMode = 'mockup';
 
     // Get all DOM elements
